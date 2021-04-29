@@ -65,15 +65,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
 
-    // useEffect(()=>{
-    //     async function getData(){
-    //         const response = await fetch('https://api.covid19api.com/summary')
+    useEffect(()=>{
+        async function getData(){
+            const response = await fetch('https://api.covid19api.com/summary')
 
-    //         let data = await response.json()
-    //         console.log(data.Global);
-    //     }
-    //     getData()
-    // },[])
+            let data = await response.json()
+            console.log(data.Global);
+        }
+        getData()
+    },[])
 
 
   const classes = useStyles();
