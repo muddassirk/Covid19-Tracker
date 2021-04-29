@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -65,16 +65,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
 
-    useEffect(()=>{
-        async function getData(){
-            const response = await fetch('https://api.covid19api.com/summary')
-
-            let data = await response.json()
-            console.log(data.Global);
-        }
-        getData()
-    },[])
-
+ 
 
   const classes = useStyles();
 
