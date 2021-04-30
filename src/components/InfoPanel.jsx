@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  total :{
+    color:'#3f51b5'
+  }
 }));
 
 export default function InfoPanel() {
@@ -51,7 +54,8 @@ export default function InfoPanel() {
                 className={classes.paper}
                 elevation={3}>
                  
-                <h3>{key}</h3>
+                <h3 className={classes.total}>{key}</h3>
+                {/* <h3>{key.replace(/_/g,' ').toUpperCase()}</h3> */}
                 <h3>{globalCovidData[key]}</h3>
               </Paper>
             </Grid>
