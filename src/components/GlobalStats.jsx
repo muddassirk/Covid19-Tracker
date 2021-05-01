@@ -31,7 +31,7 @@ export default function GlobalStats() {
       const response = await fetch('https://api.covid19api.com/summary')
 
       let data = await response.json()
-      console.log(data);
+    //   console.log(data);
     //   console.log(data.Countries);
       setglobalCovidData(data.Global)
     //   console.log(globalCovidData);
